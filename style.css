@@ -1,0 +1,202 @@
+body {
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #222;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+}
+
+/* BOTÕES */
+#buttons-container {
+    margin-bottom: 25px;
+}
+
+#buttons-container button {
+    border: none;
+    padding: 14px 24px;
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    color: white;
+    letter-spacing: 0.5px;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+/* botão 2 jogadores */
+#\32 _jogadores {
+    background: linear-gradient(135deg, #e53935, #b71c1c);
+}
+
+#\32 _jogadores:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 18px rgba(229, 57, 53, 0.35);
+}
+
+/* botão contra IA */
+#ai-player {
+    background: linear-gradient(135deg, #43a047, #1b5e20);
+}
+
+#ai-player:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 18px rgba(67, 160, 71, 0.35);
+}
+
+/* efeito ao clicar */
+#buttons-container button:active {
+    transform: scale(0.98);
+}
+
+/* foco */
+#buttons-container button:focus {
+    outline: none;
+}
+
+/* JOGO */
+#container {
+    display: flex;
+    width: 300px;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.box {
+    height: 100px;
+    border: 5px solid black;
+    box-sizing: border-box;
+    flex: 0 0 33.33%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#block-1, #block-2, #block-3 {
+    border-top: none;
+}
+
+#block-1, #block-4, #block-7 {
+    border-left: none;
+}
+
+#block-3, #block-6, #block-9 {
+    border-right: none;
+}
+
+#block-7, #block-8, #block-9 {
+    border-bottom: none;
+}
+
+/* SÍMBOLOS */
+.x {
+    font-size: 65px;
+    color: red;
+    display: inline-block;
+    line-height: 1;
+}
+
+.o {
+    width: 50px;
+    height: 50px;
+    border: 5px solid green;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.hide {
+    display: none;
+}
+
+/* PLACAR */
+#scoreboard-container {
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#scoreboard-container h2 {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+
+.score-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 0 18px;
+    min-width: 90px;
+    padding: 10px 14px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    vertical-align: middle;
+}
+
+#x-scoreboard {
+    color: red;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+#o-scoreboard {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 3px solid green;
+    border-radius: 50%;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+#scoreboard-1,
+#scoreboard-2 {
+    font-size: 28px;
+    color: black;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* MENSAGEM */
+#message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 520px;
+    background-color: rgba(0, 0, 0, 0.92);
+    color: white;
+    padding: 30px 25px;
+    box-sizing: border-box;
+    border-radius: 18px;
+    text-align: center;
+    z-index: 999;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    border: 3px solid #ffffff22;
+}
+
+#message p {
+    margin: 0;
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1.2;
+}
